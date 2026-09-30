@@ -1,0 +1,124 @@
+.counterPanel {
+  overflow: hidden;
+  border: 1px solid #d9e0d5;
+  border-radius: 8px;
+  background: rgba(255, 255, 252, 0.88);
+  box-shadow: 0 24px 70px rgba(42, 63, 45, 0.1);
+}
+
+.panelHeader {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #e5e9e1;
+  color: #6f7b70;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.liveMark {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #43845d;
+}
+
+.liveMark i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #64b87a;
+}
+
+.counterReadout {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px 20px;
+}
+
+.valueLabel {
+  color: #778177;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.value {
+  max-width: 100%;
+  overflow: hidden;
+  color: #21382c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 104px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 22px;
+}
+
+.stepButton {
+  display: grid;
+  min-height: 58px;
+  place-items: center;
+  border: 1px solid #dce3d7;
+  border-radius: 5px;
+  background: #f7f9f4;
+  color: #253a2d;
+  cursor: pointer;
+  font-size: 27px;
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.stepButton:hover {
+  transform: translateY(-1px);
+  background: #edf4e6;
+}
+
+.stepButton:active {
+  transform: translateY(0);
+}
+
+.stepButton:focus-visible,
+.resetButton:focus-visible {
+  outline: 3px solid #e2664b;
+  outline-offset: 3px;
+}
+
+.resetButton {
+  display: block;
+  width: calc(100% - 44px);
+  min-height: 52px;
+  margin: 12px 22px 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #69766c;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  text-decoration-color: #c8d0c5;
+  text-underline-offset: 4px;
+}
+
+.resetButton:hover {
+  color: #bf513b;
+  text-decoration-color: #bf513b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stepButton {
+    transition: none;
+  }
+}
